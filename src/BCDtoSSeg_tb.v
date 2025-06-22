@@ -1,43 +1,29 @@
 //tb (test banch) banco de puebas
 `timescale 1ns/1ps
-`include "src/BCDtoSSeg.v"
+`include "src/BCD.v"
 
 module BCDtoSSeg_tb(); // parentesis vacio porque no tiene entradas ni salidas
 
-    reg [3:0] in;
+    reg [4:0] in;
+    reg CLK2;
 
-    wire [6:0] SSeg;
-    wire [3:0] an;
+    wire [3:0] BCD;
 
-    BCDtoSSeg uut ( 
-        .BCD(A_tb)
+    BCD uut ( 
+        .CLK2(CLK2), .in(in), .BCD(BCD)
     ); // uut:unit under test (Nombre arbitrario)
 
+    always #5 CLK2 = ~CLK2;
+
     initial begin
-        in = b0000;
-        #10
-        in = b0000;
-        in = b0001;
-        in = b0010;
-        in = b0011;
-        in = b0100;
-        in = b0101;
-        in = b0110;
-        in = b0111;
-        in = b1000;
-        in = b1001;
-        in = ha; 
-        in = hb;
-        in = hc;
-        in = hd;
-        in = he;
-        in = hf;
+        CLK2 = 1'b0;
+        in = 5'b10101;
     end
 
     initial begin
-        $dumpfile("BCDtoSSeg.vcd");
+        $dumpfile("BCD.vcd");
         $dumpvars(-1,uut);
-        #5120 $finish;
+        #100 $finish;
     end
 
 endmodule
