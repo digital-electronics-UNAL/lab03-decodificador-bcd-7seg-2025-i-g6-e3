@@ -4,7 +4,7 @@
 
 module Displays_tb(); // parentesis vacio porque no tiene entradas ni salidas
 
-    reg [4:0] in;
+    reg [7:0] in;
     reg CLK_50;
 
     wire [0:6] SSeg; 
@@ -18,7 +18,7 @@ module Displays_tb(); // parentesis vacio porque no tiene entradas ni salidas
 
     initial begin
         CLK_50 = 1'b0;
-        in = 5'b10101;
+        in = 8'b01001001;
     end
 
     initial begin

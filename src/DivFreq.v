@@ -4,15 +4,15 @@ module DivFreq (
     output reg CLK2 
   );
 
-  reg [20:0] counter;
+  reg [$clog2(200000)-1:0] counter;
 
   initial begin
-    counter = 5'b000000000000000000000;
+    counter = 'd00;
     CLK2 = 1'b0;
   end
 
   always @ (posedge CLK_50) begin
-    if (counter == 1666668) begin
+    if (counter == 200000) begin
         counter = 0;
         CLK2 <= ~CLK2;
     end
