@@ -1,6 +1,6 @@
 module BCD (
     input CLK2,
-    input [7:0] in, 
+    input [8:0] in, 
     output reg [3:0] BCD,
     output reg [3:0] an_i
   );

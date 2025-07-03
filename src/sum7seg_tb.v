@@ -11,10 +11,9 @@ module sum7seg_tb(); // parentesis vacio porque no tiene entradas ni salidas
 
     wire [0:6] SSeg; 
     wire [3:0] an;
-    wire CO;
 
     sum7seg uut ( 
-        .CLK_50(CLK_50), .A(A), .B(B), .Sel(Sel), .SSeg(SSeg), .an(an), .CO(CO)
+        .CLK_50(CLK_50), .A(A), .B(B), .Sel(Sel), .SSeg(SSeg), .an(an)
     ); 
 
     always #5 CLK_50 = ~CLK_50;
@@ -23,13 +22,13 @@ module sum7seg_tb(); // parentesis vacio porque no tiene entradas ni salidas
         CLK_50 = 1'b0;
         A = 8'b11111111;
         B = 8'b00000001;
-        Sel = 1'b1;
+        Sel = 1'b0;
     end
 
     initial begin
         $dumpfile("sum7seg.vcd");
         $dumpvars(-1,uut);
-        #90000000 $finish;
+      #90000000 $finish;
     end
 
 endmodule

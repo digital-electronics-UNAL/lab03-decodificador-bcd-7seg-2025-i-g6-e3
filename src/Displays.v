@@ -4,7 +4,7 @@
 
 module Displays (
     input CLK_50,
-    input [7:0] in, 
+    input [8:0] in, 
     output [0:6] SSeg, 
     output [3:0] an 
   );
