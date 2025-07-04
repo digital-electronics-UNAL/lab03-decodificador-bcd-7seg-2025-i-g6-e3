@@ -20,15 +20,15 @@ module sum7seg_tb(); // parentesis vacio porque no tiene entradas ni salidas
 
     initial begin
         CLK_50 = 1'b0;
-        A = 8'b11111111;
-        B = 8'b00000001;
-        Sel = 1'b0;
+        A = 8'b00000000;
+        B = 8'b11111111;
+        Sel = 1'b1;
     end
 
     initial begin
         $dumpfile("sum7seg.vcd");
         $dumpvars(-1,uut);
-      #90000000 $finish;
+      #90000 $finish;
     end
 
 endmodule

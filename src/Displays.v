@@ -5,6 +5,7 @@
 module Displays (
     input CLK_50,
     input [8:0] in, 
+    input sel,
     output [0:6] SSeg, 
     output [3:0] an 
   );
@@ -18,7 +19,7 @@ module Displays (
   );
 
   BCD B ( 
-        .CLK2(CLK2),.in(in),.BCD(bcd),.an_i(Ani)
+        .CLK2(CLK2),.in(in),.BCD(bcd),.an_i(Ani),.sel(sel)
   );
 
   BCDtoSSeg BtSeg ( 

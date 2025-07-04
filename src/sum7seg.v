@@ -15,11 +15,11 @@ module sum7seg (
   wire [7:0] in;
 
   sumyrest sum ( 
-        .A(A),.B(B),.Sel(Sel),.CO(CO),.S0(in)
+        .A(A),.B(B),.Sel(Sel),.CO(CO),.So(in)
   );
 
   Displays Disp ( 
-        .CLK_50(CLK_50),.in({CO, in}),.SSeg(SSeg),.an(an)
+        .CLK_50(CLK_50),.in({CO, in}),.SSeg(SSeg),.an(an),.sel(Sel)
   );
   
 
