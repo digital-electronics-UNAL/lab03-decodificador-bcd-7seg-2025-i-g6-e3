@@ -22,12 +22,34 @@ Indice:
 
 ### 3. Diagramas
 
+<p align="center">
+  <img src="digrm.png" alt="Digrm" width="400"/>
+  <br>
+  <em></em>
+</p>
 
 ## 4. Simulaciones 
 
 
 ## 5. Implementación
 
+<p align="center">
+  <img src="cer.jpeg" alt="Cero" width="400"/>
+  <br>
+  <em></em>
+</p>
+
+<p align="center">
+  <img src="pos.jpeg" alt="Pos" width="400"/>
+  <br>
+  <em></em>
+</p>
+
+<p align="center">
+  <img src="neg.jpeg" alt="Neg" width="400"/>
+  <br>
+  <em></em>
+</p>
 
 ## Conclusiones
 
