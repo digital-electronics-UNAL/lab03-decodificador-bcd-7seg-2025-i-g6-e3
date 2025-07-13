@@ -57,13 +57,13 @@ Para la simulación se usó un test bench en el que se evaluó un caso en partic
 A continuación se muestra el diagrama del BCD a siete segmentos:
 
 <p align="center">
-  <img src="DiagramaBCD.png" alt="DigramaBCD" width="400"/>
+  <img src="DiagramaBCD.jpg" alt="DigramaBCD" width="400"/>
 </p>
 
 ### - Visualización Dinámica 4 Displays de 7 segmentos:
 A continuación se muestra el diagrama de la visualización Dinámica en siete segmentos:
 <p align="center">
-  <img src="displays_block1" alt="DigramaBCD" width="400"/>
+  <img src="displays_block1.jpg" alt="DigramaBCD" width="400"/>
 </p>
 
 ### - Sumador restador
@@ -76,13 +76,12 @@ A continuación se muestra el diagrama del sumador-restador con salida a 7 segme
 
 ## 4. Simulaciones 
 
-### - Visualización Dinámica 4 Displays de 7 segmentos
 ### - Sumador restador
 
 En la siguiente imagen se muestra la simulación del sumador-restador unificado con la visulización en los siete segmentos, explicado con anterioridad. Aunque los módulos involucrados manejan mas elementos, en la simulación que se muestra solo se ven unos de ellos, los cuales dan información importante del funcionamiento en general. En primer lugar tenemos el valor del primer operando, seguido del segundo operando, ambos en formato hexadecimal. Luego se observa el estado de Sel, el cual indica si es suma o resta. Inmediatamente después se ve  CLK2, que es la señal de reloj tras pasar por el divisor de frecuencia. SSeg y an son las salidas de todo el módulo, y como se mencionó anteriormente son el selector de nodo y el valor que llega al siete segmentos en binario. Finalmente se muestra  bcd, el cual lleva el valor que entra a BCDtoSSeg desde el módulo BCD en cada ciclo de reloj.
 
 <p align="center">
-  <img src="sum7seg.png" alt="Digrm" width="400"/>
+  <img src="sum7seg.jpg" alt="Digrm" width="400"/>
 </p>
 
 ## 5. Implementación
